@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Hiragino Kaku Gothic ProN";
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  ul{
+    padding-left:0
+  }
+  li{
+    list-style:none
+  }
+  @font-face {
+    font-family: "05Homura";
+    src: url("../font/05HomuraM-SemiBold.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "ipaexg";
+    src: url("../font/ipaexg.ttf") format("truetype");
+  }
+/* -------------------- CSSスタート -------------------- */
+body{
+  margin:0 2vw;
+  font-family: "ipaexg","kokoro";
+  background-image: url("../img/sauna6.jpg");
+  background-size:cover;
+  background-position:center center; 
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+  font-size: 2vw;
+}
+
+
+.topleft{
+  font-family: 'Sacramento', cursive;
+  padding-left: 5vw;
+  font-size:5vw;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1;
+  color: #000000;
+}
+
+.topright{
+  font-size:1.8vw;
+  position:fixed;
+  top:2vh;
+  right:5vw;
+  z-index:1;
+  font-family: "05Homura","ipaexg","kokoro";
+}
+
+.topright a{
+  padding-left: 0.5rem;
+}
+
+
+/*top right hover↓*/
+.c-txt{
+  color: rgb(0, 0, 0);
+  position: relative;
+  padding: 3px 10px;
+  margin-right:20px;
+}
+.c-txt::before {
+  background: #d1e178;
+  opacity: 0.8;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .2s;
+  z-index: -1;
+}
+.c-txt:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+/*top right hover↑*/
+
+@keyframes colorChange {
+  0% {
+    color: #000000;
+  }
+  80% {
+    color: #000000;
+  }
+  100% {
+    color: #000000;
+  }
+}
+.element {
+  animation: colorChange ; /* アニメーションを指定*/
+  animation-timeline: scroll();
+}
+.commitment1{
+  margin-top: 10vw;
+  background-color: rgb(255, 211, 145,0.8);
+  padding: 2vw;
+  border-radius: 10px;
+  text-align: center;
+}
+.commitment1 h1{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  letter-spacing:5;
+}
+.commitment1 p{
+  font-size:4vw;
+  margin: 0;
+  border-bottom:2px solid #000000;
+  display: inline-block;
+
+}
+.commitment2{
+  border: 5px solid rgb(153, 82, 0);
+  background-color: rgba(245, 220, 220, 0.598);
+  border-radius: 5px;
+  margin: 5vw 10vw;
+  padding:0 5vw;
+}
+.commitment3{
+  border: 5px solid rgb(0, 153, 145);
+  background-color: rgba(0, 255, 255, 0.157);
+  border-radius: 5px;
+  margin: 5vw 10vw;
+  padding:0 5vw;
+}
+.commitment4{
+  border: 5px solid rgb(122, 153, 0);
+  background-color: #d1e1787a;
+  border-radius: 5px;
+  margin: 5vw 10vw;
+  padding:0 5vw;
+}
+.commitment5{
+  display: flex;
+  justify-content: space-around; 
+  margin:5vw 10vw;
+}
+.commitment5 img{
+  width:50%;
+}
+.commitment5 h3{
+  text-align: center;
+}
+.commitment6{
+  text-align: center;
+}
+.commitment6 h3{
+  margin-bottom: 0;
+}
+.commitment6 ul{
+  margin: 0;
+  padding: 0;
+}
+.commitment7{
+  text-align: center;
+  margin:5vw 10vw;
+}
+
+.footer1 video{
+  width:100%;
+  object-fit: cover;
+  border-radius:5px;
+  height:24vw;
+}
+.footer1{
+  position: relative;
+}
+.box{
+  position: absolute;
+  left:2vw;
+  bottom:2vw;
+  width:90vw;
+  opacity:0.8;
+  background-color: #000000;
+  height:20vw;
+  border-radius:5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box2{
+  color:white;
+  font-size:2vw;
+  margin: 0;
+  padding-bottom: 0;
+}
+.box p{
+  padding:1vw;
+  margin: 0;
+  color:#ffffff;
+}
+.box p:hover{
+  color: #62625f;
+  transition: all 0.5s;
+}
+.box1{
+  color: #ffffff;
+  font-family: 'Sacramento', cursive;
+  font-size:12vw;
+  margin: 0;
+  padding-bottom: 0;
+  height:15vw;
+}
