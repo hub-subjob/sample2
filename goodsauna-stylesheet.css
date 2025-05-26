@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN";
+}
+
+a {
+  text-decoration: none;
+}
+ul{
+  padding-left:0
+}
+li{
+  list-style:none
+}
+@font-face {
+  font-family: "05Homura";
+  src: url("../font/05HomuraM-SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "ipaexg";
+  src: url("../font/ipaexg.ttf") format("truetype");
+}
+
+/* -------------------- CSSスタート -------------------- */
+body{
+  margin:0 2vw;
+  font-family: "ipaexg","kokoro";
+  background-image: url("../img/sauna8.jpg");
+  background-size:cover;
+  background-position:center center; 
+  background-color:rgba(181, 166, 166, 0.598);
+  background-blend-mode:lighten;
+  font-size: 2vw;
+  }
+
+
+.topleft{
+  font-family: 'Sacramento', cursive;
+  padding-left: 5vw;
+  font-size:5vw;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1;
+  color: #000000;
+  }
+  
+  .topright{
+  font-size:1.8vw;
+  position:fixed;
+  top:2vh;
+  right:5vw;
+  z-index:1;
+  font-family: "05Homura","ipaexg","kokoro";
+  }
+  
+  .topright a{
+  padding-left: 0.5rem;
+  }
+  
+  
+  /*top right hover↓*/
+  .c-txt{
+  color: rgb(0, 0, 0);
+  position: relative;
+  padding: 3px 10px;
+  margin-right:20px;
+  }
+  .c-txt::before {
+  background: #d1e178;
+  opacity: 0.8;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .2s;
+  z-index: -1;
+  }
+  .c-txt:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+  }
+  /*top right hover↑*/
+  
+  @keyframes colorChange {
+  0% {
+    color: #000000;
+  }
+  80% {
+    color: #000000;
+  }
+  100% {
+    color: #000000;
+  }
+  }
+  .element {
+  animation: colorChange ; /* アニメーションを指定*/
+  animation-timeline: scroll();
+  }
+  main{
+    margin: 10vw 14vw 0 14vw;
+
+  }
+  main h3{
+    margin-top: 5vw;
+  }
+  main p{
+    margin: 0;
+  }
+
+  .footer1 video{
+    width:100%;
+    object-fit: cover;
+    border-radius:5px;
+    height:24vw;
+  }
+  .footer1{
+    position: relative;
+  }
+  .box{
+    position: absolute;
+    left:2vw;
+    bottom:2vw;
+    width:90vw;
+    opacity:0.8;
+    background-color: #000000;
+    height:20vw;
+    border-radius:5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .box2{
+    color:white;
+    font-size:2vw;
+    margin: 0;
+    padding-bottom: 0;
+  }
+  .box p{
+    padding:1vw;
+    margin: 0;
+    color:#ffffff;
+  }
+  .box p:hover{
+    color: #62625f;
+    transition: all 0.5s;
+  }
+  .box1{
+    color: #ffffff;
+    font-family: 'Sacramento', cursive;
+    font-size:12vw;
+    margin: 0;
+    padding-bottom: 0;
+    height:15vw;
+  }
