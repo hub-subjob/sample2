@@ -1,0 +1,371 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  @font-face {
+    font-family: "05Homura";
+    src: url("../font/05HomuraM-SemiBold.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "ipaexg";
+    src: url("../font/ipaexg.ttf") format("truetype");
+  }
+
+/* -------------------- CSSスタート -------------------- */
+body{
+  margin:0 2vw;
+  font-family: "ipaexg","kokoro";
+}
+
+
+.topleft{
+  font-family: 'Sacramento', cursive;
+  padding-left: 5vw;
+  font-size:5vw;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1;
+}
+
+.topright{
+  font-size:1.8vw;
+  position:fixed;
+  top:2vh;
+  right:5vw;
+  z-index:1;
+  font-family: "05Homura","ipaexg","kokoro";
+}
+
+.topright a{
+  padding-left: 0.5rem;
+}
+.backgroundmove video{
+width:100%;
+border-radius:20px;
+background-color: #000000;
+}
+
+.main1{
+  position:absolute;
+  top:10vw;
+  left:7vw;
+  color: rgb(255, 255, 255);
+  font-size:4vw;
+  padding:0;
+  margin:0;
+  font-family: "05Homura","ipaexg","kokoro";
+}
+
+/*top right hover↓*/
+.c-txt{
+  color: rgb(255, 255, 255);
+  position: relative;
+  padding: 3px 10px;
+  margin-right:20px;
+}
+.c-txt::before {
+  background: #d1e178;
+  opacity: 0.8;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .2s;
+  z-index: -1;
+}
+.c-txt:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+/*top right hover↑*/
+
+@keyframes colorChange {
+  0% {
+    color: #ffffff;
+  }
+  80% {
+    color: #000000;
+  }
+  100% {
+    color: #000000;
+  }
+}
+.element {
+  animation: colorChange ; /* アニメーションを指定*/
+  animation-timeline: scroll();
+}
+.main2{
+  text-align: center;
+  padding-top:10vw;
+  font-size:5vw;
+}
+.main2 p{
+  font-size:2.5vw;
+}
+.main3 h3{
+  text-align: center;
+  font-size:5vw;
+  padding-top:10%;
+}
+.totonoibox{
+display: flex;
+justify-content: space-around;
+align-items: center;
+font-size:2vw;
+}
+.totonoibox img{
+width:45%;
+height:30vw;
+object-fit: cover;
+border-radius:10%;
+}
+.totonoi2 img{
+  object-position:0 70%;
+}
+.main3{
+  background-color: rgb(41, 41, 41);
+  border-radius:20px;
+  padding-bottom:5%;
+  color: #ffffff;
+}
+.main3out{
+  background-color: #62625f;
+  padding:3% 6%;
+  padding-bottom:5%;
+  border-radius:20px;
+}
+
+/*ととのいanimation*/
+@keyframes backgroundchenge {
+  from {
+    opacity:0;
+    position: relative;
+    left:-100px;
+    }
+  
+  to {
+    opacity:1;
+    position: relative;
+    left:0px;
+  }
+  }
+.totonoi1{
+  animation:backgroundchenge; /* アニメーションを指定*/
+  animation-timing-function: linear(0, 0, 1, 1, 1, 1);
+  animation-timeline: view();
+  animation-range: cover 0% cover 100%;
+ }
+.totonoi2{
+  animation:backgroundchenge; /* アニメーションを指定*/
+  animation-timing-function: linear(0, 0, 1, 1, 1, 1, 1);
+  animation-timeline: view();
+  animation-range: cover 0% cover 100%;
+}
+.totonoi3{
+  animation:backgroundchenge; /* アニメーションを指定*/
+  animation-timing-function: linear(0, 0, 1, 1, 1, 1, 1);
+  animation-timeline: view();
+  animation-range: cover 0% cover 100%;
+}
+.main4{
+  text-align: center;
+}
+.main4 img{
+  width:80%;
+  padding-top:3vw;
+  animation:main4animation; /* アニメーションを指定*/
+  animation-timing-function: linear(0, 0, 1, 1, 1, 1);
+  animation-timeline: view();
+  animation-range: cover 0% cover 100%;
+}
+@keyframes main4animation {
+  from {
+    opacity:0;
+    position: relative;
+    }
+  
+  to {
+    opacity:1;
+    position: relative;
+  }
+}
+
+.main5{
+  display: flex;
+  flex-direction: row-reverse;
+  margin:5vw 15vw;
+  padding:0;
+  color: #000000;
+}
+.main5-1{
+  width:50%;
+  height:25vw;
+  object-fit: cover;
+  border-radius:20px;
+}
+.main5-2{
+  width:50%;
+  text-align: left;
+}
+.main5-2 h3{
+  font-family: "05Homura","ipaexg","kokoro";
+  font-size:5vw;
+}
+.main5-2 p{
+  font-size: 1.8vw;
+}
+.main5:hover{
+  .main5-1{
+    width:100%;
+    height:25vw;
+    object-fit: cover;
+    transition: all 0.2s;
+    filter: brightness(30%);
+  }
+  .main5-2{
+    position: absolute;
+    z-index: 1;
+    left:17vw;
+    color: #ffffff;
+    transition: all 0.2s;
+  }
+}
+
+.main6{
+  display: flex;
+  margin:5vw 15vw;
+  padding:0;
+  color: #000000;
+}
+.main6-1{
+  width:50%;
+  height:25vw;
+  object-fit: cover;
+  border-radius:20px;
+}
+.main6-2{
+  width:50%;
+  text-align: center;
+}
+.main6-2 h3{
+  font-family: "05Homura","ipaexg","kokoro";
+  font-size:5vw;
+}
+.main6-2 p{
+  font-size: 1.8vw;
+}
+.main6:hover{
+  .main6-1{
+    width:100%;
+    height:25vw;
+    object-fit: cover;
+    transition: all 0.2s;
+    filter: brightness(30%);
+  }
+  .main6-2{
+    position: absolute;
+    z-index: 1;
+    left:40vw;
+    color: #ffffff;
+    transition: all 0.2s;
+  }
+}
+.main7{
+  display: flex;
+  flex-direction: row-reverse;
+  margin:5vw 15vw;
+  padding:0;
+  color: #000000;
+}
+.main7-1{
+  width:50%;
+  height:25vw;
+  object-fit: cover;
+  border-radius:20px;
+}
+.main7-2{
+  width:50%;
+  text-align: left;
+}
+.main7-2 h3{
+  font-family: "05Homura","ipaexg","kokoro";
+  font-size:4vw;
+}
+.main7-2 p{
+  font-size: 1.8vw;
+}
+.main7:hover{
+  .main7-1{
+    width:100%;
+    height:25vw;
+    object-fit: cover;
+    transition: all 0.2s;
+    filter: brightness(30%);
+  }
+  .main7-2{
+    position: absolute;
+    z-index: 1;
+    left:17vw;
+    color: #ffffff;
+    transition: all 0.2s;
+  }
+}
+
+.footer1 video{
+  width:100%;
+  object-fit: cover;
+  border-radius:5px;
+  height:24vw;
+}
+.footer1{
+  position: relative;
+}
+.box{
+  position: absolute;
+  left:2vw;
+  bottom:2vw;
+  width:90vw;
+  opacity:0.8;
+  background-color: #000000;
+  height:20vw;
+  border-radius:5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box2{
+  color:white;
+  font-size:2vw;
+  margin: 0;
+  padding-bottom: 0;
+}
+.box p{
+  padding:1vw;
+  margin: 0;
+  color:#ffffff;
+}
+.box p:hover{
+  color: #62625f;
+  transition: all 0.5s;
+}
+.box1{
+  color: #ffffff;
+  font-family: 'Sacramento', cursive;
+  font-size:12vw;
+  margin: 0;
+  padding-bottom: 0;
+  height:15vw;
+}
