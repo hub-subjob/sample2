@@ -18,11 +18,11 @@ li{
 }
 @font-face {
   font-family: "05Homura";
-  src: url("../font/05HomuraM-SemiBold.otf") format("opentype");
+  src: url("font/05HomuraM-SemiBold.otf") format("opentype");
 }
 @font-face {
   font-family: "ipaexg";
-  src: url("../font/ipaexg.ttf") format("truetype");
+  src: url("font/ipaexg.ttf") format("truetype");
 }
 
 /* -------------------- CSSスタート -------------------- */
